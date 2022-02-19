@@ -60,7 +60,7 @@ const Todos = () => {
 
 	// Delete a TODO
 	const delTodo = async (id) => {
-		const res = await axios.delete(`http://jsonplaceholder.typicode.com/todos/${id}`);
+		const res = await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
 		console.log(res.data)
 		setTodos([...todos.filter((todo) => todo.id !== id)]);
 		toast.error("Todo Deleted!", { theme: "colored" });
@@ -72,7 +72,7 @@ const Todos = () => {
 			toast.error("Field cannot be empty")
 			return
 		}
-		const res = await axios.patch(`http://jsonplaceholder.typicode.com/todos/${id}`, text)
+		const res = await axios.patch(`https://jsonplaceholder.typicode.com/todos/${id}`, text)
 		console.log(res.data)
 		setTodos(
 			todos.map((todo) => {
