@@ -1,38 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .App {
-  text-align: center;
+	background-color: rgb(207, 206, 206);
+	margin: 40px auto;
+	max-width: 60%;
+	padding: 20px;
+	font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h2 {
+	text-align: center;
+	padding: 10px;
+}
+h5{
+	text-align: center;
+}
+h6{
+	text-align: center;
+}
+
+.empty-list {
+	margin: 40px auto;
+	padding: 50px;
+	text-align: center;
+}
+
+.todo-list {
+	padding-top: 10px;
+	height: 350px;
+	overflow-y: scroll;
+}
+
+.todo-list::-webkit-scrollbar {
+	display: none;
+}
+.todo-list {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.todo-item {
+	padding: 10px 0;
+}
+.todo-title {
+	padding-left: 10px;
+}
+.completed {
+	text-decoration: line-through;
+	color: gray;
+}
+.trash {
+	color: rgb(243, 101, 101);
+	float: right;
+	font-size: 13px;
+}
+.trash:hover {
+	cursor: pointer;
+	color: rgb(228, 57, 57);
+}
+.edit {
+	color: #f5be57;
+	float: right;
+	margin-right: 15px;
+}
+.edit:hover {
+	cursor: pointer;
+	color: #ffa500;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 3px;
+	border: none;
+	background: #f0f0f0;
+}
+input[type="text"]:focus {
+	background-color: #fff;
+	outline: none;
+}
+
+.edit-modal {
+	color: #fff;
+	background: #787878;
+	border-radius: 10px;
+	width: 30%;
+	padding: 20px;
+	position: fixed;
+	top: 200px;
+	left: 35%;
+}
+
+.edit-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.times{
+	font-size: 25px;
+}
+.times:hover{
+	cursor: pointer;
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+	.App {
+		margin: 40px auto;
+		max-width: 100%;
+	}
+	body{
+		background-color: rgb(207, 206, 206);
+	}
+  
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
