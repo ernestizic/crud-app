@@ -16,7 +16,6 @@ const AddTodo = ({addTodo}) => {
                 placeholder="Type and hit 'Enter'"
                 value={text}
                 onChange={(e)=> setText(e.target.value)}
-                required
             />
         </form>
     )

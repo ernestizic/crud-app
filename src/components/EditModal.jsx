@@ -21,7 +21,6 @@ export const EditModal = ({ editModal, editTodo, closeModal}) => {
 					placeholder="Type and hit 'Enter'"
 					value={text}
 					onChange={(e) => setText(e.target.value)}
-                    required
 				/>
 			</form>
 		</div>

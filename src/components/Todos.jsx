@@ -30,6 +30,10 @@ const Todos = () => {
 
 	// Add a TODO
 	const addTodo = async(todo) => {
+		if(!todo) {
+			toast.error("Field cannot be empty")
+			return
+		}
 		const newTodo = {
 			userId: 1,
 			title: todo,
@@ -64,6 +68,10 @@ const Todos = () => {
 
 	// Edit a TODO
 	const editTodo =async(id, text)=> {
+		if(!text) {
+			toast.error("Field cannot be empty")
+			return
+		}
 		const res = await axios.patch(`http://jsonplaceholder.typicode.com/todos/${id}`, text)
 		console.log(res.data)
 		setTodos(
