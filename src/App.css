@@ -119,5 +119,11 @@ input[type="text"]:focus {
 	body{
 		background-color: rgb(207, 206, 206);
 	}
+
+	.edit-modal {
+		width: 80%;
+		top: 100px;
+		left: 10%;
+	}
   
   }
