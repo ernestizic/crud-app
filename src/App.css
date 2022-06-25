@@ -5,6 +5,7 @@
 	margin: 40px auto;
 	max-width: 60%;
 	padding: 20px;
+	border-radius: 10px;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -48,6 +49,7 @@ h6{
 .todo-item {
 	padding: 10px 0;
 }
+
 .todo-title {
 	padding-left: 10px;
 }
@@ -55,7 +57,7 @@ h6{
 	text-decoration: line-through;
 	color: gray;
 }
-.trash {
+/* .trash {
 	color: rgb(243, 101, 101);
 	float: right;
 	font-size: 13px;
@@ -72,7 +74,44 @@ h6{
 .edit:hover {
 	cursor: pointer;
 	color: #ffa500;
+} */
+.more-options{
+	margin-top: -15px;
+	float: right;
+	position: relative;
 }
+.more-options-icon{
+	font-size: 23px;
+	font-weight: bold;
+}
+.more-options-icon:hover{
+	cursor: pointer;
+}
+.menu {
+	position: absolute;
+	top: 25px;
+	right: 30px;
+	border-radius: 5px;
+	width: 120px;
+	padding: 10px 4px;
+	background-color: #fff;
+}
+button{
+	width: 100%;
+	padding: 8px 10px;
+	border: none;
+	background-color: inherit;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+button:hover {
+	cursor: pointer;
+	background-color: #000;
+	color: #fff;
+}
+
+
+
 
 input[type="text"] {
 	width: 100%;
@@ -87,9 +126,17 @@ input[type="text"]:focus {
 	outline: none;
 }
 
+.backdrop {
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
 .edit-modal {
 	color: #fff;
-	background: #787878;
+	background: #000;
 	border-radius: 10px;
 	width: 30%;
 	padding: 20px;

@@ -1,10 +1,12 @@
-import React from "react";
-import { FaEdit, FaTrash } from "react-icons/fa";
+import React, { useRef } from "react";
+// import { FaEdit, FaTrash } from "react-icons/fa";
+import OptionMenu from "./OptionMenu";
 
 const TodoItem = ({ todo, delTodo, markComplete, setEditModal }) => {
+	const toggleRef = useRef(null)
 	return (
 		<div className='todo-item'>
-			<p>
+			<div>
 				<input type='checkbox' onChange={() => markComplete(todo.id)} />
 
 				<span
@@ -14,7 +16,13 @@ const TodoItem = ({ todo, delTodo, markComplete, setEditModal }) => {
 				>
 					{todo.title}
 				</span>
-				<FaTrash className='trash' onClick={() => delTodo(todo.id)} />
+
+				<div className="more-options">
+					<span className="more-options-icon" onClick={()=> {toggleRef.current.toggleMenu()}}>...</span>
+					<OptionMenu ref={toggleRef} setEditModal={setEditModal} todo={todo} delTodo={delTodo} />
+				</div>
+
+				{/* <FaTrash className='trash' onClick={() => delTodo(todo.id)} />
 				<FaEdit
 					className='edit'
 					onClick={() =>
@@ -25,8 +33,8 @@ const TodoItem = ({ todo, delTodo, markComplete, setEditModal }) => {
 							// completed: todo.completed,
 						})
 					}
-				/>
-			</p>
+				/> */}
+			</div>
 		</div>
 	);
 };

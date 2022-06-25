@@ -23,7 +23,6 @@ function App() {
 			<div className='main-todo'>
 				<h2>Simple CRUD application</h2>
         <h5>Mirapayments Frontend test</h5>
-        <h6>(Fetched Todo limited to 10)</h6>
 				<hr />
 				<Todos />
 			</div>
